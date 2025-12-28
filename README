@@ -1,0 +1,37 @@
+Dockerビルド DockerDesktopアプリを立ち上げる
+docker-compose up -d --build
+
+
+  mysql:
+    image: mysql:8.0
+    container_name: pigry2_mysql
+    environment:
+
+Laravel環境構築
+
+docker-compose exec php bash
+composer install
+
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=pigry2
+DB_USERNAME=pigry2
+DB_PASSWORD=pigry2
+
+アプリケーションキーの作成
+php artisan key:generate
+
+マイグレーションの実行
+php artisan migrate
+
+使用技術
+Laravel 12.0
+PHP 8.2.30
+mysql  Ver 8.0.44
+
+開発環境：http://localhost/
+phpMyAdmin:：http://localhost:8080/
+
+## ER図
+![ER図](ER図.png)

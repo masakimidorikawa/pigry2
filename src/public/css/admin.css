@@ -1,0 +1,177 @@
+/* 固定ヘッダー */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between; /* ← 左右にきれいに配置 */
+    align-items: center;
+    padding: 0 20px; /* ← ここが大きすぎると見切れるので20px程度に */
+    box-sizing: border-box;
+    z-index: 1000;
+}
+.logo {
+    color: #ff8fb1;
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: none;
+}
+/* 右側ボタンを横並びに */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* ボタン間の余白 */
+}
+
+/* ボタンの基本スタイル */
+.header-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    background-color: #f2f2f2;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    white-space: nowrap; /* ← これでボタン内の文字が折り返されない */
+}
+
+/* ログアウトボタン（form内） */
+.logout-form {
+    display: inline;
+}
+
+.logout-button {
+    border: none;
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+/* コンテンツが隠れないように */
+.content {
+    padding-top: 80px;
+}
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.pagination-wrapper ul {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+}
+
+/* 現在ページだけグラデーション */
+.pagination-wrapper .page-item.active .page-link {
+    background: linear-gradient(135deg, #a78bfa, #f472b6);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* 他のページは普通の色（必要なら調整） */
+.pagination-wrapper .page-link {
+    background: #ffffff;
+    color: #333;
+    border-radius: 8px;
+    border: none;
+}
+.input-error {
+    color: #ff0000;          /* 赤系の文字色 */
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.log-edit-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.log-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ec4899;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.log-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    background: #f9f9f9;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.error-message {
+    color: #e11d48;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.back-button {
+    background: #ccc;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.update-button {
+    background: linear-gradient(to right, #a64bf4, #f46fba);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.update-button:hover {
+    background: #db2777;
+}
+
